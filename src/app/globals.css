@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------- */
+/* Design tokens ported from design/web-client-new/code.html (tailwind    */
+/* config) and design/web-client-new/DESIGN.md ("Velvet & Iron Cue Club", */
+/* dark subterranean billiards lounge palette). Every semantic utility    */
+/* used across the site (bg-primary, text-on-surface, font-headline-lg,   */
+/* text-headline-lg, p-gutter, rounded-xl...) is powered by this theme.   */
+/* ---------------------------------------------------------------------- */
+
+@theme inline {
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface: var(--surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
+
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+
+  --font-display-xl: var(--font-epilogue-raw), sans-serif;
+  --font-display-xl-mobile: var(--font-epilogue-raw), sans-serif;
+  --font-headline-lg: var(--font-epilogue-raw), sans-serif;
+  --font-headline-lg-mobile: var(--font-epilogue-raw), sans-serif;
+  --font-headline-md: var(--font-epilogue-raw), sans-serif;
+  --font-headline-md-mobile: var(--font-epilogue-raw), sans-serif;
+  --font-headline-sm: var(--font-epilogue-raw), sans-serif;
+  --font-body-lg: var(--font-hanken-raw), sans-serif;
+  --font-body-md: var(--font-hanken-raw), sans-serif;
+  --font-body-sm: var(--font-hanken-raw), sans-serif;
+  --font-label-lg: var(--font-jetbrains-raw), monospace;
+  --font-label-md: var(--font-jetbrains-raw), monospace;
+  --font-label-sm: var(--font-jetbrains-raw), monospace;
+  --font-body: var(--font-hanken-raw), sans-serif;
+  --font-mono: var(--font-jetbrains-raw), monospace;
+
+  --text-display-xl: 56px;
+  --text-display-xl--line-height: 64px;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-xl--font-weight: 900;
+  --text-display-xl-mobile: 36px;
+  --text-display-xl-mobile--line-height: 44px;
+  --text-display-xl-mobile--letter-spacing: -0.01em;
+  --text-display-xl-mobile--font-weight: 900;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.015em;
+  --text-headline-lg--font-weight: 800;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 800;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--font-weight: 700;
+  --text-headline-md-mobile: 22px;
+  --text-headline-md-mobile--line-height: 30px;
+  --text-headline-md-mobile--font-weight: 700;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 700;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.06em;
+  --text-label-lg--font-weight: 600;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.08em;
+  --text-label-md--font-weight: 500;
+  --text-label-sm: 10px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.1em;
+  --text-label-sm--font-weight: 500;
+
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-space-xl: 3rem;
+}
+
+:root {
+  --surface-bright: #3d3836;
+  --surface-dim: #171210;
+  --surface-container-lowest: #110d0b;
+  --surface-container-low: #1f1b18;
+  --surface-container: #231f1c;
+  --surface-container-high: #2e2927;
+  --surface-container-highest: #393431;
+  --surface: #171210;
+  --surface-variant: #393431;
+  --surface-tint: #edc06c;
+  --on-surface: #eae0dd;
+  --on-surface-variant: #d2c5b3;
+  --inverse-surface: #eae0dd;
+  --inverse-on-surface: #342f2d;
+  --inverse-primary: #7b580b;
+  --outline: #9b8f7f;
+  --outline-variant: #4e4638;
+
+  --primary: #edc06c;
+  --on-primary: #412d00;
+  --primary-container: #c59b4b;
+  --on-primary-container: #4b3400;
+  --primary-fixed: #ffdea7;
+  --primary-fixed-dim: #edc06c;
+  --on-primary-fixed: #271900;
+  --on-primary-fixed-variant: #5e4200;
+
+  --secondary: #d9c3a3;
+  --on-secondary: #3c2e18;
+  --secondary-container: #54442c;
+  --on-secondary-container: #c7b293;
+  --secondary-fixed: #f7dfbe;
+  --secondary-fixed-dim: #d9c3a3;
+  --on-secondary-fixed: #251a05;
+  --on-secondary-fixed-variant: #54442c;
+
+  --tertiary: #f5b99c;
+  --on-tertiary: #4b2712;
+  --tertiary-container: #cd9579;
+  --on-tertiary-container: #552e19;
+  --tertiary-fixed: #ffdbcb;
+  --tertiary-fixed-dim: #f5b99c;
+  --on-tertiary-fixed: #321202;
+  --on-tertiary-fixed-variant: #663c26;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  --background: #171210;
+  --on-background: #eae0dd;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #171210;
+    color: #eae0dd;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
